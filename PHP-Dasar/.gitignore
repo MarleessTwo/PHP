@@ -1,0 +1,8 @@
+# Abaikan folder 
+ga_dianggap/
+
+# Abaikan file berekstensi
+*.gadianggap
+
+# Abaikan spesifik file
+_file.gadig
