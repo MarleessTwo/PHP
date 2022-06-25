@@ -20,6 +20,7 @@ $arr = [100, 200];
 sum($arr[0], $arr[1]);
 
 
+
 // Function argument list
 function sumAll(...$nilai)
 {
@@ -27,7 +28,7 @@ function sumAll(...$nilai)
   foreach ($nilai as $n) {
     $total += $n;
   }
-  echo "Total " . implode(" + ", $nilai) . " = {$total}" . PHP_EOL;
+  echo "Total " . implode(" + ", $nilai) . " = {$total}" . PHP_EOL; // implode(); untuk menyatukan string ke array | ada juga explode(); untuk memisahkan string ke array.
 }
 $val = [1, 2, 3];
 sumAll(20, 30, 40, 50, 20, 30, 40, 50);
