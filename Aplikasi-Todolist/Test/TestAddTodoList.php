@@ -1,11 +1,11 @@
 <?php
 
-require_once "../Model/TodoList.php";
-require_once "../BusinessLogic/AddTodoList.php";
+require_once "/DEV/PHP/PHPVsc/Aplikasi-Todolist/Model/TodoList.php";
+require_once "/DEV/PHP/PHPVsc/Aplikasi-Todolist/BusinessLogic/AddTodoList.php";
 
 
-addTodoList("Eko");
-addTodoList("Kurniawan");
-addTodoList("Khannedy");
+addTodoList("Kerja");
+addTodoList("Nugas");
+addTodoList("Kerja Lagi");
 
 var_dump($todoList);
