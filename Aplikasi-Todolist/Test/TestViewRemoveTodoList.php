@@ -14,7 +14,6 @@ addTodoList("Now");
 
 showTodoList();
 
-removeTodoList(3);
-// viewRemoveTodoList();
+viewRemoveTodoList();
 
 showTodoList();

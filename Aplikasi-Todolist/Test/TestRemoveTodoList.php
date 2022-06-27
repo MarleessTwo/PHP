@@ -1,28 +1,20 @@
 <?php
 
-require_once "../Model/TodoList.php";
-require_once "../BusinessLogic/AddTodoList.php";
-require_once "../BusinessLogic/ShowTodoList.php";
-require_once "../BusinessLogic/RemoveTodoList.php";
+require_once "/DEV/PHP/PHPVsc/Aplikasi-Todolist/Model/TodoList.php";
+require_once "/DEV/PHP/PHPVsc/Aplikasi-Todolist/BusinessLogic/AddTodoList.php";
+require_once "/DEV/PHP/PHPVsc/Aplikasi-Todolist/BusinessLogic/ShowTodoList.php";
+require_once "/DEV/PHP/PHPVsc/Aplikasi-Todolist/BusinessLogic/RemoveTodoList.php";
 
 
-addTodoList("Eko");
-addTodoList("Kurniawan");
-addTodoList("Khannedy");
-addTodoList("Budi");
-addTodoList("Joko");
-
-showTodoList();
-
-removeTodoList(3);
+addTodoList("1.Belanja");
+addTodoList("2.Belanja");
+addTodoList("3.Belanja");
+addTodoList("5.Belanja");
+addTodoList("6.Belanja");
 
 showTodoList();
 
-removeTodoList(2);
-
-showTodoList();
-
-$success = removeTodoList(4);
+$success = removeTodoList(1);
 var_dump($success);
 
 showTodoList();
