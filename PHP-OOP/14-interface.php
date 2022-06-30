@@ -2,7 +2,6 @@
 
 require_once "data/Car.php";
 
-use Data\{Avanza};
+use Data\{Pajero};
 
-$car = new Avanza();
-$car->drive();
+$car = new Pajero();
