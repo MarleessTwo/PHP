@@ -1,7 +1,7 @@
 <?php
 
-require_once "/DEV/PHP/PHPVsc/Aplikasi-Todolist/Model/TodoList.php";
-require_once "/DEV/PHP/PHPVsc/Aplikasi-Todolist/BusinessLogic/AddTodoList.php";
+require_once __DIR__ . "/../Model/TodoList.php";
+require_once __DIR__ . "/../BusinessLogic/AddTodoList.php";
 
 
 addTodoList("Kerja");

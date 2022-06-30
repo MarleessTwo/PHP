@@ -1,6 +1,6 @@
 <?php
 
-require_once "/DEV/PHP/PHPVsc/Aplikasi-Todolist/Helper/Input.php";
+require_once __DIR__ . "/../Helper/Input.php";
 
 $name = input("Name");
 echo "Hello $name" . PHP_EOL;
