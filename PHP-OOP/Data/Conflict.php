@@ -1,29 +1,30 @@
 <?php
 
 // Penggunaan namespace
-namespace Data\One {
-  class Conflict
+namespace Data\A {
+  class Hubungan
   {
-    var string $name;
-    var string $id;
+    var string $pasangan;
+    var string $pendapat;
 
     function info(): void
     {
-      echo "Nama : {$this->name}" . PHP_EOL;
-      echo "Id : {$this->id}" . PHP_EOL;
+      echo "Nama : {$this->pasangan}" . PHP_EOL;
+      echo "Ketentuan : {$this->pendapat}" . PHP_EOL;
     }
   }
 }
 
-namespace Data\Two {
-  class Conflict
+namespace Data\B {
+  class Hubungan
   {
-    var string $name;
-    var string $id;
+    var string $pasangan;
+    var string $pendapat;
+
     function info(): void
     {
-      echo "Nama : {$this->name}" . PHP_EOL;
-      echo "ID : {$this->id}" . PHP_EOL;
+      echo "Nama : {$this->pasangan}" . PHP_EOL;
+      echo "Ketentuan : {$this->pendapat}" . PHP_EOL;
     }
   }
 }

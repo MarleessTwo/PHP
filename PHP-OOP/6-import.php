@@ -3,19 +3,19 @@
 require_once 'Data/Conflict.php';
 require_once 'Data/Helper.php';
 
-use Data\One\Conflict as Conflict1;
-use Data\Two\Conflict as Conflict2;
+use Data\A\Hubungan as Hubungan1;
+use Data\B\Hubungan as Hubungan2;
 use function Helper\helpMe;
 use const Helper\APPLICATION;
 
-$conflict1 = new Conflict1();
-$conflict1->name = "Marli";
-$conflict1->id = "01";
+$conflict1 = new Hubungan1();
+$conflict1->pasangan = "Marli";
+$conflict1->pendapat = "Putus";
 $conflict1->info();
 
-$conflict2 = new Conflict2();
-$conflict2->name = "Marli";
-$conflict2->id = "01";
+$conflict2 = new Hubungan2();
+$conflict2->pasangan = "Syfa";
+$conflict2->pendapat = "Tidak Putus";
 $conflict2->info();
 
 helpMe();

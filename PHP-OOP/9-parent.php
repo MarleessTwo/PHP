@@ -1,14 +1,14 @@
 <?php
 
-require_once 'Data/Shape.php';
+require_once 'Data/K2F.php';
 
-use Data\{Shape, Rectangle};
+use Data\{K2F, SpeedoA};
 
-$shape = new Shape();
-echo $shape->getCorner() . PHP_EOL;
+$K2F = new K2F();
+echo $K2F->getJumlah() . PHP_EOL;
 
-$reqt = new Rectangle();
-echo $reqt->getCorner() . PHP_EOL;
+$SA = new SpeedoA();
+echo $SA->getIsi() . PHP_EOL;
 
 // Memanggil Parent class
-echo $reqt->getParentCorner() . PHP_EOL;
+echo $SA->getIsiParent() . PHP_EOL;

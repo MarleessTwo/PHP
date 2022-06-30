@@ -1,6 +1,5 @@
 <?php
 
-
 require_once "Data/Manager.php";
 
 $manager = new Manager();

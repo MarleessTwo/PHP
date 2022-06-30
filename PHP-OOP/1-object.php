@@ -3,7 +3,7 @@
 
 require_once "data/Person.php";
 // Objek marleess
-$marleess = new Person();
+$marleess = new Person("Marli", "Karawng");
 // akses prop class person
 $marleess->name = "Marleess";
 $marleess->address = null;

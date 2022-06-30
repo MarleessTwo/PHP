@@ -4,13 +4,20 @@
 class Person
 {
 
-  const ANAK = "Pertama";
+  const PROGRAMMER = "PHP";
 
   // (?) untuk data nullable properti
   // di bawah ini adalah properties
   var string $name;
   var ?string $address = null;
-  var string $country = "Disk C";
+  var string $country = "Indonesia";
+
+  // Function __construct
+  function __construct(string $name, ?string $address)
+  {
+    $this->name = $name;
+    $this->address = $address;
+  }
 
   // Function Say Hello
   function sayHello(?string $OrangLain)
@@ -23,14 +30,7 @@ class Person
   function info()
   {
     // self untuk mengakses constant class Person (saati ini)
-    echo "{$this->name} adalah anak " . self::ANAK . PHP_EOL;
-  }
-
-  // Function __construct
-  function __construct(string $name, ?string $address)
-  {
-    $this->name = $name;
-    $this->address = $address;
+    echo "{$this->name} Programmer " . self::PROGRAMMER . PHP_EOL;
   }
 
   // Function __destruct

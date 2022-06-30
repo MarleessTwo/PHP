@@ -2,4 +2,4 @@
 
 require_once "Data/Person.php";
 
-echo Person::ANAK . PHP_EOL;
+echo Person::PROGRAMMER . PHP_EOL;

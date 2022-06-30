@@ -7,16 +7,16 @@ class Manager
 
   function sayHello(string $name): void
   {
-    echo "Hi {$name}, my name is {$this->name} (Manager)" . PHP_EOL;
+    echo "Hi {$name}, im {$this->name}. im Manager of this company" . PHP_EOL;
   }
 }
 
 
-// Manager
+// class Dunhill Black
 class Supervisor extends Manager
 {
   function sayHello(string $name): void
   {
-    echo "Hi {$name}, my name is {$this->name} (SVP)" . PHP_EOL;
+    echo "Hi {$name}, im {$this->name}. im Supervisor of this company" . PHP_EOL;
   }
 }
