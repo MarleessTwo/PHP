@@ -1,7 +1,11 @@
 <?php
 
-require_once "data/Car.php";
+require_once "Data/SubjigTwo.php";
 
-use Data\{Pajero};
+use Data\{SpeedoA, SpeedoB};
 
-$car = new Pajero();
+$speedoA = new SpeedoA();
+$speedoA->caryOut();
+
+$speedoB = new SpeedoB();
+$speedoB->caryOut();
