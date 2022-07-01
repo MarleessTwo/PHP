@@ -9,5 +9,3 @@ function sayHello(string $first, string $middle = "", string $last): void
 sayHello("Eko", "Kurniawan", "Khannedy");
 // sayHello("Eko", "Khannedy"); // error
 sayHello(last: "Khannedy", first: "Eko", middle: "Kurniawan");
-
-<?php 
