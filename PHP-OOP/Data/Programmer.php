@@ -1,9 +1,12 @@
 <?php
 
 
+// Metode Polymorphism
 class Programmer
 {
-  var string $name;
+
+  public string $name;
+
   public function __construct(string $name)
   {
     $this->name = $name;
@@ -12,13 +15,28 @@ class Programmer
 
 class BackendProgrammer extends Programmer
 {
+  // 
 }
+
 class FrontendProgrammer extends Programmer
 {
+  // 
+}
+
+class Carrier
+{
+  // ibarat $programmer = class Programmer
+  public Programmer $programmer;
 }
 
 
-class Company
+function sayHelloProgrammer(Programmer $programmer)
 {
-  public Programmer $programmer;
+  if ($programmer instanceof BackendProgrammer) {
+    echo "Hello Backend Programmer $programmer->name" . PHP_EOL;
+  } else if ($programmer instanceof FrontendProgrammer) {
+    echo "Hello Frontend Programmer $programmer->name" . PHP_EOL;
+  } else if ($programmer instanceof Programmer) {
+    echo "Hello Programmer $programmer->name" . PHP_EOL;
+  }
 }
