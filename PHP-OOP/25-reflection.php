@@ -4,13 +4,11 @@ require_once "exception/ValidationException.php";
 require_once "data/LoginRequest.php";
 require_once "helper/ValidationUtil.php";
 
-// $request = new LoginRequest();
-// $request->username = "eko";
-// $request->password = "rahasia";
+$request = new LoginRequest();
+$request->username = "admin";
+$request->password = "admin";
 
-// ValidationUtil::validate($request);
-
-// ValidationUtil::validateReflection($request);
+ValidationUtil::validateReflection($request);
 
 class RegisterUserRequest
 {
@@ -20,10 +18,8 @@ class RegisterUserRequest
 }
 
 $register = new RegisterUserRequest();
-// $register->name = "Eko";
-// $register->address = "Subang";
-// $register->email = "eko@gmail.com";
+$register->name = "Sumarli";
+$register->address = "Karawang";
+$register->email = "example@gmail.com";
 
 ValidationUtil::validateReflection($register);
-
-// ValidationUtil::validate($register);
