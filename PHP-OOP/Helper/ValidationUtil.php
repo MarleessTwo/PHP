@@ -13,8 +13,6 @@ class ValidationUtil
         throw new ValidationException("$property->name is not set");
       } else if (is_null($property->getValue($request))) {
         throw new ValidationException("$property->name is null");
-      } else {
-        echo "{$property} Request is Valid" . PHP_EOL;
       }
     }
   }
