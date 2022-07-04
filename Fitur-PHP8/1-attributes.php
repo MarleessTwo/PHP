@@ -67,8 +67,3 @@ function validateLength(ReflectionProperty $property, object $object): void
       throw new Exception("Property $property->name is too long");
   }
 }
-
-$request = new LoginRequest();
-$request->username = "eko123";
-$request->password = "rahasia123";
-validate($request);
