@@ -1,6 +1,6 @@
 <?php
 
-require_once __DIR__ . '/GetConnection.php';
+require_once __DIR__ . '/Helper/GetConnectionHelper.php';
 
 $connection = getConnection();
 

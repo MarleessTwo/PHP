@@ -13,6 +13,7 @@ class Person
   var string $country = "Indonesia";
 
   // Function __construct
+  // kegunaan construct: x = new Person("$name, $address");
   function __construct(string $name, ?string $address)
   {
     $this->name = $name;

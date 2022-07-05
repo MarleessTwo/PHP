@@ -2,49 +2,49 @@
 
 namespace Repository {
 
-    use Model\Comment;
+    use Model\Blog;
 
-    interface CommentRepository
+    interface BlogRepository
     {
 
-        function insert(Comment $comment): Comment;
+        function insert(Blog $blog): Blog;
 
-        function findById(int $id): ?Comment;
+        function findById(int $id): ?Blog;
 
         function findAll(): array;
-
     }
 
-    class CommentRepositoryImpl implements CommentRepository
+    class BlogRepositoryImpl implements BlogRepository
     {
 
         public function __construct(private \PDO $connection)
         {
         }
 
-        public function insert(Comment $comment): Comment
+        public function insert(Blog $blog): Blog
         {
-            $sql = "INSERT INTO comments(email, comment) VALUES (?, ?)";
+            $sql = "INSERT INTO blog(author, tittle, content) VALUES (?, ?, ?)";
             $statement = $this->connection->prepare($sql);
-            $statement->execute([$comment->getEmail(), $comment->getComment()]);
+            $statement->execute([$blog->getAuthor(), $blog->getTittle(), $blog->getContent()]);
 
             $id = $this->connection->lastInsertId();
-            $comment->setId($id);
+            $blog->setId($id);
 
-            return $comment;
+            return $blog;
         }
 
-        public function findById(int $id): ?Comment
+        public function findById(int $id): ?Blog
         {
-            $sql = "SELECT * FROM comments WHERE id = ?";
+            $sql = "SELECT * FROM blog WHERE id = ?";
             $statement = $this->connection->prepare($sql);
             $statement->execute([$id]);
 
             if ($row = $statement->fetch()) {
-                return new Comment(
+                return new Blog(
                     id: $row["id"],
-                    email: $row["email"],
-                    comment: $row["comment"]
+                    author: $row["author"],
+                    tittle: $row["tittle"],
+                    content: $row["content"]
                 );
             } else {
                 return null;
@@ -59,16 +59,15 @@ namespace Repository {
             $array = [];
 
             while ($row = $statement->fetch()) {
-                $array[] = new Comment(
+                $array[] = new Blog(
                     id: $row["id"],
-                    email: $row["email"],
-                    comment: $row["comment"]
+                    author: $row["author"],
+                    tittle: $row["tittle"],
+                    content: $row["content"]
                 );
             }
 
             return $array;
         }
-
     }
-
 }

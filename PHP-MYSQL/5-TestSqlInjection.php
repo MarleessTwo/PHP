@@ -1,17 +1,17 @@
 <?php
 
-require_once __DIR__ . '/GetConnection.php';
+require_once __DIR__ . '/Helper/GetConnectionHelper.php';
 
 $connection = getConnection();
 
-$username = "eko";
-$password = "salah";
+$username = "marleess'; #";
+// $username = "marleess";
+$password = "MarleeSs123123_123";
+$sql = "SELECT * FROM users WHERE username = '$username' AND password = '$password';";
 
-$sql = "SELECT * FROM admin WHERE username = ? AND password = ?";
-$statement = $connection->prepare($sql);
-$statement->bindParam(1, $username);
-$statement->bindParam(2, $password);
-$statement->execute();
+// echo $sql . PHP_EOL;
+
+$statement = $connection->query($sql);
 
 $success = false;
 $find_user = null;

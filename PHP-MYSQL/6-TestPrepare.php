@@ -1,13 +1,13 @@
 <?php
 
-require_once __DIR__ . '/GetConnection.php';
+require_once __DIR__ . '/Helper/GetConnectionHelper.php';
 
 $connection = getConnection();
 
-$username = "admin'; #";
-$password = "admin";
+$username = "marleess";
+$password = "MarleeSs123123";
 
-$sql = "SELECT * FROM admin WHERE username = :username AND password = :password";
+$sql = "SELECT * FROM users WHERE username = :username AND password = :password";
 $statement = $connection->prepare($sql);
 $statement->bindParam("username", $username);
 $statement->bindParam("password", $password);
