@@ -13,12 +13,11 @@ $repository = new BlogRepositoryImpl($connection);
 $blog = new Blog(author: "repository@test.com", tittle: "Test", content: "1. Anjay Bisa Dong, 2. Anjay Bisa Dong");
 $newBlog = $repository->insert($blog);
 //
-// var_dump($newComment->getId());
+// var_dump($newBlog->getId());
 
 // $comment = $repository->findById(32);
-// var_dump($comment);
 
-// $comments = $repository->findAll();
-var_dump($blog->getId());
+$blog = $repository->findById(1);
+echo $blog;
 
 $connection = null;

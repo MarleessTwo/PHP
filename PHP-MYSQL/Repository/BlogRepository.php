@@ -9,9 +9,9 @@ namespace Repository {
 
         function insert(Blog $blog): Blog;
 
-        function findById(int $id): ?Blog;
+        // function findById(int $id): ?Blog;
 
-        function findAll(): array;
+        // function findAll(): array;
     }
 
     class BlogRepositoryImpl implements BlogRepository
@@ -33,41 +33,41 @@ namespace Repository {
             return $blog;
         }
 
-        public function findById(int $id): ?Blog
-        {
-            $sql = "SELECT * FROM blog WHERE id = ?";
-            $statement = $this->connection->prepare($sql);
-            $statement->execute([$id]);
+        // public function findById(int $id): ?Blog
+        // {
+        //     $sql = "SELECT * FROM blog WHERE id = ?";
+        //     $statement = $this->connection->prepare($sql);
+        //     $statement->execute([$id]);
 
-            if ($row = $statement->fetch()) {
-                return new Blog(
-                    id: $row["id"],
-                    author: $row["author"],
-                    tittle: $row["tittle"],
-                    content: $row["content"]
-                );
-            } else {
-                return null;
-            }
-        }
+        //     if ($row = $statement->fetch()) {
+        //         return new Blog(
+        //             id: $row["id"],
+        //             author: $row["author"],
+        //             tittle: $row["tittle"],
+        //             content: $row["content"]
+        //         );
+        //     } else {
+        //         return null;
+        //     }
+        // }
 
-        public function findAll(): array
-        {
-            $sql = "SELECT * FROM comments";
-            $statement = $this->connection->query($sql);
+        // public function findAll(): array
+        // {
+        //     $sql = "SELECT * FROM blog";
+        //     $statement = $this->connection->query($sql);
 
-            $array = [];
+        //     $array = [];
 
-            while ($row = $statement->fetch()) {
-                $array[] = new Blog(
-                    id: $row["id"],
-                    author: $row["author"],
-                    tittle: $row["tittle"],
-                    content: $row["content"]
-                );
-            }
+        //     while ($row = $statement->fetch()) {
+        //         $array[] = new Blog(
+        //             id: $row["id"],
+        //             author: $row["author"],
+        //             tittle: $row["tittle"],
+        //             content: $row["content"]
+        //         );
+        //     }
 
-            return $array;
-        }
+        //     return $array;
+        // }
     }
 }
