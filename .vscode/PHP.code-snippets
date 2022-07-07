@@ -20,9 +20,20 @@
       "</label>"
     ]
   },
-  "My Form": {
-    "prefix": "myform",
-    "body": "<form method=\"${1|get,post|}\" action=\"$2\">$3</form>"
+
+
+
+// PHP OOP
+
+
+  "Function OOP": {
+    "prefix": "func",
+    "body": "${1:public} function ${2:functionName}($3) {\n\t$4\n}"
+  },
+  "Construct Function": {
+    "prefix": "construct",
+    "body": "public function __construct($1) {\n\t$2\n}"
   }
+
 
 }
