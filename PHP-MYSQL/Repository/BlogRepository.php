@@ -1,73 +1,75 @@
 <?php
 
-namespace Repository {
+// namespace Repository {
+//     include_once __DIR__ . '/../Model/Blog.php';
 
-    use Model\Blog;
+//     use Model\Blog;
 
-    interface BlogRepository
-    {
+//     interface BlogRepository
+//     {
 
-        function insert(Blog $blog): Blog;
+//         function insert(Blog $blog): Blog;
 
-        // function findById(int $id): ?Blog;
+//         // function findById(int $id): ?Blog;
 
-        // function findAll(): array;
-    }
+//         function findAll(): array;
+//     }
 
-    class BlogRepositoryImpl implements BlogRepository
-    {
 
-        public function __construct(private \PDO $connection)
-        {
-        }
+//     class BlogRepositoryImpl implements BlogRepository
+//     {
 
-        public function insert(Blog $blog): Blog
-        {
-            $sql = "INSERT INTO blog(author, tittle, content) VALUES (?, ?, ?)";
-            $statement = $this->connection->prepare($sql);
-            $statement->execute([$blog->getAuthor(), $blog->getTittle(), $blog->getContent()]);
+//         public function __construct(private \PDO $connection)
+//         {
+//         }
 
-            $id = $this->connection->lastInsertId();
-            $blog->setId($id);
+//         public function insert(Blog $blog): Blog
+//         {
+//             $sql = "INSERT INTO blog(author, tittle, content) VALUES (?, ?, ?)";
+//             $statement = $this->connection->prepare($sql);
+//             $statement->execute([$blog->getAuthor(), $blog->getTittle(), $blog->getContent()]);
 
-            return $blog;
-        }
+//             $id = $this->connection->lastInsertId();
+//             $blog->setId($id);
 
-        // public function findById(int $id): ?Blog
-        // {
-        //     $sql = "SELECT * FROM blog WHERE id = ?";
-        //     $statement = $this->connection->prepare($sql);
-        //     $statement->execute([$id]);
+//             return $blog;
+//         }
 
-        //     if ($row = $statement->fetch()) {
-        //         return new Blog(
-        //             id: $row["id"],
-        //             author: $row["author"],
-        //             tittle: $row["tittle"],
-        //             content: $row["content"]
-        //         );
-        //     } else {
-        //         return null;
-        //     }
-        // }
+//         // public function findById(int $id): ?Blog
+//         // {
+//         //     $sql = "SELECT * FROM blog WHERE id = ?";
+//         //     $statement = $this->connection->prepare($sql);
+//         //     $statement->execute([$id]);
 
-        // public function findAll(): array
-        // {
-        //     $sql = "SELECT * FROM blog";
-        //     $statement = $this->connection->query($sql);
+//         //     if ($row = $statement->fetch()) {
+//         //         return new Blog(
+//         //             id: $row["id"],
+//         //             author: $row["author"],
+//         //             tittle: $row["tittle"],
+//         //             content: $row["content"]
+//         //         );
+//         //     } else {
+//         //         return null;
+//         //     }
+//         // }
 
-        //     $array = [];
+//         public function findAll(): array
+//         {
+//             $sql = "SELECT * FROM blog";
+//             $statement = $this->connection->query($sql);
 
-        //     while ($row = $statement->fetch()) {
-        //         $array[] = new Blog(
-        //             id: $row["id"],
-        //             author: $row["author"],
-        //             tittle: $row["tittle"],
-        //             content: $row["content"]
-        //         );
-        //     }
+//             $Blog_array = [];
 
-        //     return $array;
-        // }
-    }
-}
+//             while ($row = $statement->fetch()) {
+//                 $array[] = new Blog(
+//                     id: $row["id"],
+//                     author: $row["author"],
+//                     tittle: $row["tittle"],
+//                     content: $row["content"]
+//                 );
+//             }
+
+//             return $Blog_array;
+//         }
+//     }
+// }

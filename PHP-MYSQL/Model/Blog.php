@@ -1,62 +1,62 @@
 <?php
 
-namespace Model {
+// namespace Model {
 
-    class Blog
-    {
+//     class Blog
+//     {
 
-        public function __construct(
-            private ?int $id = null,
-            private ?string $author = null,
-            private ?string $tittle = null,
-            private ?string $content = null
-        ) {
-        }
+//         public function __construct(
+//             private ?int $id = null,
+//             private ?string $author = null,
+//             private ?string $tittle = null,
+//             private ?string $content = null
+//         ) {
+//         }
 
-        // ID
-        public function getId(): ?int
-        {
-            return $this->id;
-        }
-
-
-        public function setId(?int $id): void
-        {
-            $this->id = $id;
-        }
-
-        // Author
-        public function getAuthor(): ?string
-        {
-            return $this->author;
-        }
+//         // ID
+//         public function getId(): ?int
+//         {
+//             return $this->id;
+//         }
 
 
-        public function setAtuhor(?string $author): void
-        {
-            $this->author = $author;
-        }
+//         public function setId(?int $id): void
+//         {
+//             $this->id = $id;
+//         }
 
-        // Tittle
-        public function getTittle(): ?string
-        {
-            return $this->tittle;
-        }
+//         // Author
+//         public function getAuthor(): ?string
+//         {
+//             return $this->author;
+//         }
 
-        public function setTittle(?string $tittle): void
-        {
-            $this->tittle = $tittle;
-        }
 
-        // Content
-        public function getContent(): ?string
-        {
-            return $this->content;
-        }
+//         public function setAtuhor(?string $author): void
+//         {
+//             $this->author = $author;
+//         }
 
-        public function setContent(?string $content): void
-        {
-            $this->content = $content;
-        }
-    }
-}
+//         // Tittle
+//         public function getTittle(): ?string
+//         {
+//             return $this->tittle;
+//         }
+
+//         public function setTittle(?string $tittle): void
+//         {
+//             $this->tittle = $tittle;
+//         }
+
+//         // Content
+//         public function getContent(): ?string
+//         {
+//             return $this->content;
+//         }
+
+//         public function setContent(?string $content): void
+//         {
+//             $this->content = $content;
+//         }
+//     }
+// }

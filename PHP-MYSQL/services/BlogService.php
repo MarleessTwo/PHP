@@ -1,25 +1,31 @@
 <?php
 
-namespace Service {
-  include_once __DIR__ . '/../Repository/BlogRepository.php';
+// namespace Service {
+//   include_once __DIR__ . '/../Repository/BlogRepository.php';
+//   include_once __DIR__ . '/../Helper/GetConnectionHelper.php';
 
-  use Repository\BlogRepository;
-  use Repository\BlogRepositoryImpl;
+//   use Repository\BlogRepositoryImpl;
 
-  interface BlogService
-  {
-    function showBlog(): void;
-  }
-  class BlogServiceImpl implements BlogService
-  {
-    private BlogRepository $blog;
+//   interface BlogService
+//   {
+//     function showBlogList();
+//   }
 
-    public function showBlog(): void
-    {
+//   class BlogServiceImpl implements BlogService
+//   {
+//     private BlogRepositoryImpl $blogListRepo;
+//     function showBlogList()
+//     {
+//       echo 'a';
+//       $connection = getConnection();
+//       $repository = new BlogRepositoryImpl($connection);
 
-      // echo "Pembuat : {$this->blog->getAuthor()}";
-      // echo "Judul   : {$this->blog->getTittle()}";
-      // echo "Isi     : {$this->blog->getContent()}";
-    }
-  }
-}
+//       $blogList = $repository->findAll();
+//       var_dump($blogList);
+
+//       foreach ($blogList as $number => $value) {
+//         echo " {$number} " . PHP_EOL;
+//       }
+//     }
+//   }
+// }
