@@ -1,0 +1,15 @@
+{
+    "name": "marleess/php-mvc",
+    "type": "project",
+    "autoload": {
+        "psr-4": {
+            "Marleess\\PhpMvc\\": "src/"
+        }
+    },
+    "require": {
+        "php" : ">=8"
+    },
+    "require-dev": {
+        "phpunit/phpunit" : "9.5.8"
+    }
+}
