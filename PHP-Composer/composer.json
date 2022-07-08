@@ -1,0 +1,17 @@
+{
+    "name": "marleess/php-composer",
+    "description": "n/a",
+    "type": "project",
+    "authors": [
+        {
+            "name": "Marleess",
+            "email": "marleysumarly@gmail.com"
+        }
+    ],"autoload": {
+        "psr-4": {
+            
+            "TestComposer\\" : "src/"
+        }
+    },
+    "require": {}
+}
