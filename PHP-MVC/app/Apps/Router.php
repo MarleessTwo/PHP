@@ -30,7 +30,7 @@ class Router
 
     // check url yg diakses dan disamakan dengan Router::add
     foreach (self::$routes as $route) {
-      if ($route['path'] && $method == $route['method']) {
+      if ($path == $route['path'] && $method == $route['method']) {
 
         $function = $route['function']; // mengambil string dari Router add
         $controller = new $route['controller']; // instansiai object HomeController
