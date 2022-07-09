@@ -1,11 +1,14 @@
 <?php
 
-$path = '/index';
 
 
-if (isset($_SERVER['PATH_INFO'])) {
-  $path = $_SERVER['PATH_INFO'];
-}
+require_once __DIR__ . '/../vendor/autoload.php';
 
+use MainDir\Apps\Router;
+use MainDir\Controller\HomeController;
 
-require __DIR__ .  '/../app/view' . $path . '.php';
+Router::add('GET', '/', HomeController::class, 'index');
+Router::add('GET', '/data', HomeController::class, 'data');
+Router::add('GET', '/about', HomeController::class, 'about');
+
+Router::run();

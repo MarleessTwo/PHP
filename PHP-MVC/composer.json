@@ -1,9 +1,21 @@
 {
-    "name": "marleess/php-mvc",
+    "name": "marleess/belajar-mvc",
+    "description": "Belajar PHP Model View Controller",
     "type": "project",
+    "authors": [
+        {
+            "name": "Marleess",
+            "email": "marleysumarly@gmail.com"
+        }
+    ],
     "autoload": {
         "psr-4": {
-            "Marleess\\PhpMvc\\": "src/"
+            "MainDir\\" : "app"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "MainDir\\" : "test"
         }
     },
     "require": {
