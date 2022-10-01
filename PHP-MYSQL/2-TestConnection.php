@@ -2,9 +2,9 @@
 
 $host = "localhost";
 $port = 3306;
-$database = "php-web";
+$database = "blog_app";
 $username = "root";
-$password = "";
+$password = "marleess771";
 
 try {
     $connection = new PDO("mysql:host=$host:$port;dbname=$database", $username, $password);
