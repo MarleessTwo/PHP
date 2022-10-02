@@ -29,7 +29,7 @@ namespace A_Object {
     }
 
     // Function Show Info
-    public function showInfo()
+    public function showInfo(): void
     {
       echo "Image: $this->image" . "<br>";
       echo "Name: $this->name" . "<br>";
@@ -39,7 +39,7 @@ namespace A_Object {
     }
 
     // Function Max Name Input
-    public function maxStringInput()
+    public function maxStringInput(): void
     {
       if (strlen($this->name) > 25) {
         throw new Exception("Inputan maksimal 10 karakter");
@@ -47,7 +47,7 @@ namespace A_Object {
     }
 
     // Function Max Quantity Input
-    public function maxIntInput()
+    public function maxIntInput(): void
     {
       if ($this->quantity > 1000) {
         throw new Exception("Inputan maksimal 1.000");
@@ -55,7 +55,7 @@ namespace A_Object {
     }
 
     // Function Max Price Input
-    public function maxFloatInput()
+    public function maxFloatInput(): void
     {
       if ($this->price > 1_000_000_000) {
         throw new Exception("Inputan maksimal 1.000.000.000");
